@@ -22,7 +22,6 @@ nav {
   width: 100%;
   z-index: 1000;
 }
-
 nav .logo {
   flex: 0 0 auto;
   border: 1px solid #000;
@@ -33,26 +32,13 @@ nav .logo img {
   display: block;
   max-height: 50px;
 }
-
 nav .nav-center {
   display: flex;
   flex: 1;
   justify-content: center;
   gap: 1rem;
 }
-nav .nav-center a {
-  padding: 0.5rem 1rem;
-  border: 1px solid #000;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  color: inherit;
-  font-weight: 500;
-}
-
-nav .nav-right {
-  display: flex;
-  gap: 1rem;
-}
+nav .nav-center a,
 nav .nav-right a {
   padding: 0.5rem 1rem;
   border: 1px solid #000;
@@ -61,26 +47,29 @@ nav .nav-right a {
   color: inherit;
   font-weight: 500;
 }
-
+nav .nav-right {
+  display: flex;
+  gap: 1rem;
+}
 nav a:hover,
 nav a:focus {
   background: #e0e0e0;
 }
 
 html, body {
-  height: 100%;      
+  height: 100%;
   margin: 0;
-  overflow: hidden;   
+  overflow: hidden;        
 }
 
 .section-container {
   display: none;
-  height: 100vh;       
+  height: 100vh;             
 }
 
 .section-container:target {
   display: block;
-  overflow-y: auto;     
+  overflow-y: auto;          
 }
 
 body:not(:target) .section-container#bio {
