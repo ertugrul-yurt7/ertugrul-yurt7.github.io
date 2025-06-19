@@ -67,14 +67,30 @@ nav a:focus {
   background: #e0e0e0;
 }
 
-section {
+html, body {
+  height: 100%;      
+  margin: 0;
+  overflow: hidden;   
+}
+
+.section-container {
+  display: none;
+  height: 100vh;       
+}
+
+.section-container:target {
   display: block;
-  padding: 4rem 1rem;
+  overflow-y: auto;     
+}
+
+body:not(:target) .section-container#bio {
+  display: block;
+  overflow-y: auto;
+}
+
+.section-container section {
+  padding: 2rem;
   max-width: 800px;
   margin: 0 auto;
 }
 
-section h2 {
-  margin-bottom: 1rem;
-  font-size: 1.75rem;
-}
