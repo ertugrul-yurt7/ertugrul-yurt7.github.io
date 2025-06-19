@@ -1,6 +1,75 @@
-body {
-    margin: 0;
-    background: greenyellow;
-    text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  font-family: Arial, sans-serif;
+  background: #fafafa;
+  color: #333;
+  line-height: 1.6;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  border-bottom: 2px solid #ccc;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav .logo {
+  flex: 0 0 auto;
+  border: 1px solid #000;
+  border-radius: 0.5rem;
+  padding: 0.25rem;
+}
+nav .logo img {
+  display: block;
+  max-height: 50px;
+}
+
+nav .nav-center {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  gap: 1rem;
+}
+nav .nav-center a,
+nav .nav-right a {
+  padding: 0.5rem 1rem;
+  border: 1px solid #000;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+}
+
+nav .nav-right {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a:hover,
+nav a:focus {
+  background: #e0e0e0;
+}
+
+section {
+  min-height: 100vh;
+  padding: calc(60px + 20px) 1rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+section h2 {
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
 }
