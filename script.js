@@ -1,6 +1,6 @@
 // add photo file names here
 const photos = [
-    'favicon.jpg',
+    'favicon.png',
     'photo2.jpg', 
     'photo3.jpg',
     'photo4.jpg'
