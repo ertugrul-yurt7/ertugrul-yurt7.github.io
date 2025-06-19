@@ -8,6 +8,7 @@ body {
   font-family: Arial, sans-serif;
   background: #fafafa;
   color: #333;
+  line-height: 1.6;
 }
 
 nav {
@@ -22,6 +23,7 @@ nav {
   width: 100%;
   z-index: 1000;
 }
+
 nav .logo {
   flex: 0 0 auto;
   border: 1px solid #000;
@@ -32,6 +34,7 @@ nav .logo img {
   display: block;
   max-height: 50px;
 }
+
 nav .nav-center {
   display: flex;
   flex: 1;
@@ -47,39 +50,26 @@ nav .nav-right a {
   color: inherit;
   font-weight: 500;
 }
+
 nav .nav-right {
   display: flex;
   gap: 1rem;
 }
+
 nav a:hover,
 nav a:focus {
   background: #e0e0e0;
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
-  overflow: hidden;        
-}
-
-.section-container {
-  display: none;
-  height: 100vh;             
-}
-
-.section-container:target {
-  display: block;
-  overflow-y: auto;          
-}
-
-body:not(:target) .section-container#bio {
-  display: block;
-  overflow-y: auto;
-}
-
-.section-container section {
-  padding: 2rem;
+section {
+  min-height: 100vh;
+  padding: calc(60px + 20px) 1rem 1rem;
   max-width: 800px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
+section h2 {
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+}
