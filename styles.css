@@ -75,13 +75,7 @@ section {
   max-width: 800px;
   margin: 0 auto;
 }
-section:target {
-  display: block;
-}
-body:not(:target) section#bio,
-section#bio:target {
-  display: block;
-}
+
 section h2 {
   margin-bottom: 1rem;
   font-size: 1.75rem;
