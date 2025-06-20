@@ -183,3 +183,131 @@ section h2 {
   text-align: center;
 }
 
+.education-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.school-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.school-logo {
+  flex-shrink: 0;
+}
+
+.school-logo-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  background: #fff;
+}
+
+.school-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.school-info p {
+  margin: 0 0 0.5rem 0;
+  color: #666;
+  font-style: italic;
+}
+
+.school-info a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.school-info a:hover {
+  text-decoration: underline;
+}
+
+.education-content {
+  margin-bottom: 2rem;
+}
+
+.education-content h4 {
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 1.2rem;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 0.5rem;
+}
+
+.education-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.education-content li {
+  margin-bottom: 0.8rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.education-content li:before {
+  content: "▸";
+  color: #007bff;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.sfu-photos {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.sfu-photo {
+  max-width: 400px;
+  max-height: 250px;
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: block;
+  margin: 0 auto 1rem auto;
+  object-fit: cover;
+}
+
+.nav-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  min-width: 40px;
+}
+
+.nav-btn:hover {
+  background: #0056b3;
+}
+
+.nav-btn:active {
+  transform: scale(0.95);
+}
+
+.photo-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+

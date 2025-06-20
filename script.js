@@ -126,11 +126,112 @@ function prevExperience() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Your existing photo code 
     
     if (companyName) { 
         updateExperience();
         nextExpBtn.addEventListener('click', nextExperience);
         prevExpBtn.addEventListener('click', prevExperience);
+    }
+});
+
+const sfuPhotos = [
+    'sfu2.png',
+    'sfu3.png', 
+    'sfu4.png'
+];
+
+let currentSfuPhotoIndex = 0;
+
+const educationData = [
+    {
+        schoolName: "Simon Fraser University",
+        period: "2023 - 2027",
+        website: "https://www.sfu.ca/",
+        logo: "sfu.png",
+        type: "Bachelor's Degree",
+        details: [
+            "Computing Science Major",
+            "Second year student",
+            "Currently pursuing Bachelor of Applied Sciences in Computing Science",
+            "Planning to specialize in Artificial Intelligence and Machine Learning."
+        ]
+    }
+];
+
+let currentEduIndex = 0;
+
+const schoolLogo = document.getElementById('school-logo');
+const schoolName = document.getElementById('school-name');
+const schoolPeriod = document.getElementById('school-period');
+const schoolWebsite = document.getElementById('school-website');
+const educationType = document.getElementById('education-type');
+const educationDetailsList = document.getElementById('education-details');
+
+const sfuPhoto = document.getElementById('sfu-photo');
+const prevSfuBtn = document.getElementById('prev-sfu-btn');
+const nextSfuBtn = document.getElementById('next-sfu-btn');
+
+function updateEducation() {
+    const edu = educationData[currentEduIndex];
+    
+    schoolLogo.src = edu.logo;
+    schoolLogo.alt = `${edu.schoolName} Logo`;
+    schoolName.textContent = edu.schoolName;
+    schoolPeriod.textContent = edu.period;
+    schoolWebsite.href = edu.website;
+    educationType.textContent = edu.type;
+    
+    educationDetailsList.innerHTML = '';
+    edu.details.forEach(detail => {
+        const li = document.createElement('li');
+        li.textContent = detail;
+        educationDetailsList.appendChild(li);
+    });
+}
+
+function updateSfuPhoto() {
+    sfuPhoto.src = sfuPhotos[currentSfuPhotoIndex];
+    sfuPhoto.alt = `SFU Photo ${currentSfuPhotoIndex + 1}`;
+}
+
+function nextSfuPhoto() {
+    currentSfuPhotoIndex = (currentSfuPhotoIndex + 1) % sfuPhotos.length;
+    updateSfuPhoto();
+}
+
+function prevSfuPhoto() {
+    currentSfuPhotoIndex = (currentSfuPhotoIndex - 1 + sfuPhotos.length) % sfuPhotos.length;
+    updateSfuPhoto();
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    updatePhoto();
+    nextBtn.addEventListener('click', nextPhoto);
+    prevBtn.addEventListener('click', prevPhoto);
+    
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'ArrowLeft') {
+            prevPhoto();
+        } else if (event.key === 'ArrowRight') {
+            nextPhoto();
+        }
+    });
+    
+    setInterval(nextPhoto, 5000);
+    
+    if (companyName) { 
+        updateExperience();
+        nextExpBtn.addEventListener('click', nextExperience);
+        prevExpBtn.addEventListener('click', prevExperience);
+    }
+    
+    if (schoolName) {
+        updateEducation();
+        updateSfuPhoto();
+        
+        nextSfuBtn.addEventListener('click', nextSfuPhoto);
+        prevSfuBtn.addEventListener('click', prevSfuPhoto);
+        
+        setInterval(nextSfuPhoto, 7000); 
     }
 });
