@@ -166,9 +166,6 @@ const schoolPeriod = document.getElementById('school-period');
 const schoolWebsite = document.getElementById('school-website');
 const educationType = document.getElementById('education-type');
 const educationDetailsList = document.getElementById('education-details');
-const eduCounter = document.getElementById('edu-counter');
-const prevEduBtn = document.getElementById('prev-edu-btn');
-const nextEduBtn = document.getElementById('next-edu-btn');
 
 const sfuPhoto = document.getElementById('sfu-photo');
 const prevSfuBtn = document.getElementById('prev-sfu-btn');
@@ -190,8 +187,6 @@ function updateEducation() {
         li.textContent = detail;
         educationDetailsList.appendChild(li);
     });
-    
-    eduCounter.textContent = `${currentEduIndex + 1} / ${educationData.length}`;
 }
 
 function updateSfuPhoto() {
@@ -207,16 +202,6 @@ function nextSfuPhoto() {
 function prevSfuPhoto() {
     currentSfuPhotoIndex = (currentSfuPhotoIndex - 1 + sfuPhotos.length) % sfuPhotos.length;
     updateSfuPhoto();
-}
-
-function nextEducation() {
-    currentEduIndex = (currentEduIndex + 1) % educationData.length;
-    updateEducation();
-}
-
-function prevEducation() {
-    currentEduIndex = (currentEduIndex - 1 + educationData.length) % educationData.length;
-    updateEducation();
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -243,9 +228,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (schoolName) {
         updateEducation();
         updateSfuPhoto();
-        
-        nextEduBtn.addEventListener('click', nextEducation);
-        prevEduBtn.addEventListener('click', prevEducation);
         
         nextSfuBtn.addEventListener('click', nextSfuPhoto);
         prevSfuBtn.addEventListener('click', prevSfuPhoto);
