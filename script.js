@@ -235,3 +235,106 @@ document.addEventListener('DOMContentLoaded', function() {
         setInterval(nextSfuPhoto, 7000); 
     }
 });
+
+// Hobbies data - replace with your actual hobbies and photos
+const hobbiesData = [
+    {
+        name: "Photography",
+        description: "Capturing beautiful moments and exploring different photography techniques. I enjoy landscape, portrait, and street photography.",
+        photos: [
+            'hobby-photo1.jpg', // Replace with your actual photo filenames
+            'hobby-photo2.jpg',
+            'hobby-photo3.jpg'
+        ]
+    },
+    {
+        name: "Coding Projects",
+        description: "Building web applications and exploring new programming languages. Always working on personal projects to improve my skills.",
+        photos: [
+            'coding1.jpg', // Replace with your actual photo filenames
+            'coding2.jpg',
+            'coding3.jpg'
+        ]
+    },
+    {
+        name: "Gaming",
+        description: "Playing strategic and puzzle games that challenge problem-solving skills. Favorite genres include strategy and RPG games.",
+        photos: [
+            'gaming1.jpg', // Replace with your actual photo filenames
+            'gaming2.jpg',
+            'gaming3.jpg'
+        ]
+    }
+];
+
+let currentHobbyIndex = 0;
+let currentHobbyPhotoIndex = 0;
+
+const hobbyName = document.getElementById('hobby-name');
+const hobbyDescription = document.getElementById('hobby-description');
+const hobbyPhoto = document.getElementById('hobby-photo');
+const hobbyCounter = document.getElementById('hobby-counter');
+const prevHobbyBtn = document.getElementById('prev-hobby-btn');
+const nextHobbyBtn = document.getElementById('next-hobby-btn');
+const prevHobbySectionBtn = document.getElementById('prev-hobby-section-btn');
+const nextHobbySectionBtn = document.getElementById('next-hobby-section-btn');
+
+function updateHobby() {
+    const hobby = hobbiesData[currentHobbyIndex];
+    
+    hobbyName.textContent = hobby.name;
+    hobbyDescription.textContent = hobby.description;
+    hobbyCounter.textContent = `${currentHobbyIndex + 1} / ${hobbiesData.length}`;
+    
+    currentHobbyPhotoIndex = 0;
+    updateHobbyPhoto();
+}
+
+function updateHobbyPhoto() {
+    const hobby = hobbiesData[currentHobbyIndex];
+    if (hobby.photos && hobby.photos.length > 0) {
+        hobbyPhoto.src = hobby.photos[currentHobbyPhotoIndex];
+        hobbyPhoto.alt = `${hobby.name} Photo ${currentHobbyPhotoIndex + 1}`;
+    }
+}
+
+function nextHobbyPhoto() {
+    const hobby = hobbiesData[currentHobbyIndex];
+    if (hobby.photos) {
+        currentHobbyPhotoIndex = (currentHobbyPhotoIndex + 1) % hobby.photos.length;
+        updateHobbyPhoto();
+    }
+}
+
+function prevHobbyPhoto() {
+    const hobby = hobbiesData[currentHobbyIndex];
+    if (hobby.photos) {
+        currentHobbyPhotoIndex = (currentHobbyPhotoIndex - 1 + hobby.photos.length) % hobby.photos.length;
+        updateHobbyPhoto();
+    }
+}
+
+function nextHobby() {
+    currentHobbyIndex = (currentHobbyIndex + 1) % hobbiesData.length;
+    updateHobby();
+}
+
+function prevHobby() {
+    currentHobbyIndex = (currentHobbyIndex - 1 + hobbiesData.length) % hobbiesData.length;
+    updateHobby();
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    
+    if (hobbyName) {
+        updateHobby();
+        
+        nextHobbyBtn.addEventListener('click', nextHobbyPhoto);
+        prevHobbyBtn.addEventListener('click', prevHobbyPhoto);
+        
+        nextHobbySectionBtn.addEventListener('click', nextHobby);
+        prevHobbySectionBtn.addEventListener('click', prevHobby);
+        
+        setInterval(nextHobbyPhoto, 9000); 
+    }
+});
