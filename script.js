@@ -50,7 +50,7 @@ const experiences = [
         companyName: "BC Technology for Learning Society",
         period: "January 2023 - February 2023",
         website: "https://reusetechbc.ca/",
-        logo: "company1-logo.png", // Add your logo file
+        logo: "bctech.png", // Add your logo file
         type: "Work Experience",
         roles: [
             "Refurbishing computer and laptop hardware/parts and installing software.",
@@ -62,7 +62,7 @@ const experiences = [
         companyName: "Greater Vancouver Food Bank",
         period: "August 2022 - August 2024",
         website: "https://foodbank.bc.ca/",
-        logo: "company2-logo.png",
+        logo: "fbnk.png",
         type: "Volunteer",
         roles: [
             "Helping people to get food with a with a friendly and embracing manner.",
@@ -73,7 +73,7 @@ const experiences = [
         companyName: "Shoppers Drug Mart",
         period: "February 2022 - May 2022",
         website: "https://www.shoppersdrugmart.ca/",
-        logo: "volunteer-logo.png",
+        logo: "shoppers.png",
         type: "Volunteer Pharmacy Assistant",
         roles: [
             "Customer service: Greeting customers and giving out prescriptions.",
