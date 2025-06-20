@@ -266,14 +266,12 @@ section h2 {
   font-weight: bold;
 }
 
-.sfu-photo {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
+.sfu-photos {
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
-.sfu-photos {
+.sfu-photo {
   max-width: 400px;
   max-height: 250px;
   width: auto;
@@ -284,7 +282,6 @@ section h2 {
   margin: 0 auto 1rem auto;
   object-fit: cover;
 }
-
 
 .nav-btn {
   background: #007bff;
