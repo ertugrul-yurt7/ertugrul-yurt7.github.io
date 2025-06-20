@@ -73,3 +73,16 @@ section h2 {
   margin-bottom: 1rem;
   font-size: 1.75rem;
 }
+
+.profile-photo {
+    max-width: 250px;      
+    max-height: 300px;       
+    width: auto;            
+    height: auto;            
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: block;          
+    margin: 0 auto;        
+    object-fit: cover;      
+}
+
