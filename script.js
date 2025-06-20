@@ -1,4 +1,3 @@
-// add photo file names here
 const photos = [
     'ert1.jpg',
     'ert2.jpg', 
@@ -26,31 +25,12 @@ function prevPhoto() {
     updatePhoto();
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    
-    updatePhoto();
-    
-    nextBtn.addEventListener('click', nextPhoto);
-    prevBtn.addEventListener('click', prevPhoto);
-    
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'ArrowLeft') {
-            prevPhoto();
-        } else if (event.key === 'ArrowRight') {
-            nextPhoto();
-        }
-    });
-    
-    // Auto-slideshow 
-    setInterval(nextPhoto, 5000); // Changes photo every 5 seconds
-});
-
 const experiences = [
     {
         companyName: "BC Technology for Learning Society",
         period: "January 2023 - February 2023",
         website: "https://reusetechbc.ca/",
-        logo: "bctech.png", // Add your logo file
+        logo: "bctech.png", 
         type: "Work Experience",
         roles: [
             "Refurbishing computer and laptop hardware/parts and installing software.",
@@ -125,15 +105,6 @@ function prevExperience() {
     updateExperience();
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    
-    if (companyName) { 
-        updateExperience();
-        nextExpBtn.addEventListener('click', nextExperience);
-        prevExpBtn.addEventListener('click', prevExperience);
-    }
-});
-
 const sfuPhotos = [
     'sfu2.png',
     'sfu3.png', 
@@ -204,6 +175,97 @@ function prevSfuPhoto() {
     updateSfuPhoto();
 }
 
+const hobbiesData = [
+    {
+        name: "Travelling",
+        description: "I love travelling across Canada and internationally. It is my favourite activity while I am away from the keyboard. Exploring new cultures, architectures, and nature enlightens me.",
+        photos: [
+            'travel1.jpg',
+            'travel2.jpg',
+            'travel3.jpg',
+            'travel4.jpg'
+        ]
+    },
+    {
+        name: "Eating",
+        description: "I enjoy eating different foods. My favourite meal is sea-food. I also try to avoid sugar and junk food to stay healthy.",
+        photos: [
+            'eat1.jpg', 
+            'eat2.jpg'
+        ]
+    },
+    {
+        name: "Nature and History",
+        description: "Camping in the nature, hiking, being away from the crowd helps me clear my mind after the stress of the city. I also like visiting historical places and explore the past civilizations.",
+        photos: [
+            'nat1.jpg', 
+            'nat2.jpg',
+            'nat3.jpg',
+            'nat4.jpg',
+            'hist1.jpg',
+            'hist2.jpg',
+            'hist3.jpg'
+        ]
+    }
+];
+
+let currentHobbyIndex = 0;
+let currentHobbyPhotoIndex = 0;
+
+const hobbyName = document.getElementById('hobby-name');
+const hobbyDescription = document.getElementById('hobby-description');
+const hobbyPhoto = document.getElementById('hobby-photo');
+const hobbyCounter = document.getElementById('hobby-counter');
+const prevHobbyBtn = document.getElementById('prev-hobby-btn');
+const nextHobbyBtn = document.getElementById('next-hobby-btn');
+const prevHobbySectionBtn = document.getElementById('prev-hobby-section-btn');
+const nextHobbySectionBtn = document.getElementById('next-hobby-section-btn');
+
+function updateHobby() {
+    const hobby = hobbiesData[currentHobbyIndex];
+    
+    hobbyName.textContent = hobby.name;
+    hobbyDescription.textContent = hobby.description;
+    hobbyCounter.textContent = `${currentHobbyIndex + 1} / ${hobbiesData.length}`;
+    
+    currentHobbyPhotoIndex = 0;
+    updateHobbyPhoto();
+}
+
+function updateHobbyPhoto() {
+    const hobby = hobbiesData[currentHobbyIndex];
+    if (hobby.photos && hobby.photos.length > 0) {
+        hobbyPhoto.src = hobby.photos[currentHobbyPhotoIndex];
+        hobbyPhoto.alt = `${hobby.name} Photo ${currentHobbyPhotoIndex + 1}`;
+    }
+}
+
+function nextHobbyPhoto() {
+    const hobby = hobbiesData[currentHobbyIndex];
+    if (hobby.photos) {
+        currentHobbyPhotoIndex = (currentHobbyPhotoIndex + 1) % hobby.photos.length;
+        updateHobbyPhoto();
+    }
+}
+
+function prevHobbyPhoto() {
+    const hobby = hobbiesData[currentHobbyIndex];
+    if (hobby.photos) {
+        currentHobbyPhotoIndex = (currentHobbyPhotoIndex - 1 + hobby.photos.length) % hobby.photos.length;
+        updateHobbyPhoto();
+    }
+}
+
+function nextHobby() {
+    currentHobbyIndex = (currentHobbyIndex + 1) % hobbiesData.length;
+    updateHobby();
+}
+
+function prevHobby() {
+    currentHobbyIndex = (currentHobbyIndex - 1 + hobbiesData.length) % hobbiesData.length;
+    updateHobby();
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     updatePhoto();
     nextBtn.addEventListener('click', nextPhoto);
@@ -233,5 +295,17 @@ document.addEventListener('DOMContentLoaded', function() {
         prevSfuBtn.addEventListener('click', prevSfuPhoto);
         
         setInterval(nextSfuPhoto, 7000); 
+    }
+    
+    if (hobbyName) {
+        updateHobby();
+
+        nextHobbyBtn.addEventListener('click', nextHobbyPhoto);
+        prevHobbyBtn.addEventListener('click', prevHobbyPhoto);
+        
+        nextHobbySectionBtn.addEventListener('click', nextHobby);
+        prevHobbySectionBtn.addEventListener('click', prevHobby);
+        
+        setInterval(nextHobbyPhoto, 9000); 
     }
 });
