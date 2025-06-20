@@ -191,7 +191,7 @@ const hobbiesData = [
         description: "I enjoy eating different foods. My favourite meal is sea-food. I also try to avoid sugar and junk food to stay healthy.",
         photos: [
             'eat1.jpg', 
-            'eat22.jpg'
+            'eat2.jpg'
         ]
     },
     {
