@@ -1,4 +1,3 @@
-// add photo file names here
 const photos = [
     'ert1.jpg',
     'ert2.jpg', 
@@ -26,31 +25,12 @@ function prevPhoto() {
     updatePhoto();
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    
-    updatePhoto();
-    
-    nextBtn.addEventListener('click', nextPhoto);
-    prevBtn.addEventListener('click', prevPhoto);
-    
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'ArrowLeft') {
-            prevPhoto();
-        } else if (event.key === 'ArrowRight') {
-            nextPhoto();
-        }
-    });
-    
-    // Auto-slideshow 
-    setInterval(nextPhoto, 5000); // Changes photo every 5 seconds
-});
-
 const experiences = [
     {
         companyName: "BC Technology for Learning Society",
         period: "January 2023 - February 2023",
         website: "https://reusetechbc.ca/",
-        logo: "bctech.png", // Add your logo file
+        logo: "bctech.png", 
         type: "Work Experience",
         roles: [
             "Refurbishing computer and laptop hardware/parts and installing software.",
@@ -125,15 +105,6 @@ function prevExperience() {
     updateExperience();
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    
-    if (companyName) { 
-        updateExperience();
-        nextExpBtn.addEventListener('click', nextExperience);
-        prevExpBtn.addEventListener('click', prevExperience);
-    }
-});
-
 const sfuPhotos = [
     'sfu2.png',
     'sfu3.png', 
@@ -204,38 +175,6 @@ function prevSfuPhoto() {
     updateSfuPhoto();
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    updatePhoto();
-    nextBtn.addEventListener('click', nextPhoto);
-    prevBtn.addEventListener('click', prevPhoto);
-    
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'ArrowLeft') {
-            prevPhoto();
-        } else if (event.key === 'ArrowRight') {
-            nextPhoto();
-        }
-    });
-    
-    setInterval(nextPhoto, 5000);
-    
-    if (companyName) { 
-        updateExperience();
-        nextExpBtn.addEventListener('click', nextExperience);
-        prevExpBtn.addEventListener('click', prevExperience);
-    }
-    
-    if (schoolName) {
-        updateEducation();
-        updateSfuPhoto();
-        
-        nextSfuBtn.addEventListener('click', nextSfuPhoto);
-        prevSfuBtn.addEventListener('click', prevSfuPhoto);
-        
-        setInterval(nextSfuPhoto, 7000); 
-    }
-});
-
 const hobbiesData = [
     {
         name: "Travelling",
@@ -257,8 +196,7 @@ const hobbiesData = [
     },
     {
         name: "Nature and History",
-        description: "Camping in the nature, hiking, being away from the crowd helps me clear my mind after the stress of the city.",
-                     "I also like visiting historical places and explore the past civilizations.",
+        description: "Camping in the nature, hiking, being away from the crowd helps me clear my mind after the stress of the city. I also like visiting historical places and explore the past civilizations.",
         photos: [
             'nat1.jpg', 
             'nat2.jpg',
@@ -329,10 +267,39 @@ function prevHobby() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    updatePhoto();
+    nextBtn.addEventListener('click', nextPhoto);
+    prevBtn.addEventListener('click', prevPhoto);
+    
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'ArrowLeft') {
+            prevPhoto();
+        } else if (event.key === 'ArrowRight') {
+            nextPhoto();
+        }
+    });
+    
+    setInterval(nextPhoto, 5000);
+    
+    if (companyName) { 
+        updateExperience();
+        nextExpBtn.addEventListener('click', nextExperience);
+        prevExpBtn.addEventListener('click', prevExperience);
+    }
+    
+    if (schoolName) {
+        updateEducation();
+        updateSfuPhoto();
+        
+        nextSfuBtn.addEventListener('click', nextSfuPhoto);
+        prevSfuBtn.addEventListener('click', prevSfuPhoto);
+        
+        setInterval(nextSfuPhoto, 7000); 
+    }
     
     if (hobbyName) {
         updateHobby();
-        
+
         nextHobbyBtn.addEventListener('click', nextHobbyPhoto);
         prevHobbyBtn.addEventListener('click', prevHobbyPhoto);
         
