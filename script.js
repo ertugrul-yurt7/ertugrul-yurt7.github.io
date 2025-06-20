@@ -135,9 +135,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 const sfuPhotos = [
-    'sfu2.jpg',
-    'sfu3.jpg', 
-    'sfu4.jpg'
+    'sfu2.png',
+    'sfu3.png', 
+    'sfu4.png'
 ];
 
 let currentSfuPhotoIndex = 0;
