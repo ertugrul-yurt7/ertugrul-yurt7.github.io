@@ -236,33 +236,37 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Hobbies data - replace with your actual hobbies and photos
 const hobbiesData = [
     {
-        name: "Photography",
-        description: "Capturing beautiful moments and exploring different photography techniques. I enjoy landscape, portrait, and street photography.",
+        name: "Travelling",
+        description: "I love travelling across Canada and internationally. It is my favourite activity while I am away from the keyboard. Exploring new cultures, architectures, and nature enlightens me.",
         photos: [
-            'hobby-photo1.jpg', // Replace with your actual photo filenames
-            'hobby-photo2.jpg',
-            'hobby-photo3.jpg'
+            'travel1.jpg',
+            'travel2.jpg',
+            'travel3.jpg',
+            'travel4.jpg'
         ]
     },
     {
-        name: "Coding Projects",
-        description: "Building web applications and exploring new programming languages. Always working on personal projects to improve my skills.",
+        name: "Eating",
+        description: "I enjoy eating different foods. My favourite meal is sea-food. I also try to avoid sugar and junk food to stay healthy.",
         photos: [
-            'coding1.jpg', // Replace with your actual photo filenames
-            'coding2.jpg',
-            'coding3.jpg'
+            'eat1.jpg', 
+            'eat22.jpg'
         ]
     },
     {
-        name: "Gaming",
-        description: "Playing strategic and puzzle games that challenge problem-solving skills. Favorite genres include strategy and RPG games.",
+        name: "Nature and History",
+        description: "Camping in the nature, hiking, being away from the crowd helps me clear my mind after the stress of the city.",
+                     "I also like visiting historical places and explore the past civilizations.",
         photos: [
-            'gaming1.jpg', // Replace with your actual photo filenames
-            'gaming2.jpg',
-            'gaming3.jpg'
+            'nat1.jpg', 
+            'nat2.jpg',
+            'nat3.jpg',
+            'nat4.jpg',
+            'hist1.jpg',
+            'hist2.jpg',
+            'hist3.jpg'
         ]
     }
 ];
