@@ -1,10 +1,8 @@
 // add photo file names here
 const photos = [
-    'favicon.png',
-    'photo2.jpg', 
-    'photo3.jpg',
-    'photo4.jpg'
-    
+    'ert1.jpg',
+    'ert2.jpg', 
+    'ert3.jpg',
 ];
 
 let currentPhotoIndex = 0;
