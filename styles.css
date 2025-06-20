@@ -465,3 +465,92 @@ section h2 {
   }
 }
 
+.resume-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.resume-intro {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.resume-download {
+  margin-bottom: 1rem;
+}
+
+.resume-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  gap: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+  min-width: 280px;
+}
+
+.resume-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.4);
+  background: linear-gradient(135deg, #0056b3, #004494);
+}
+
+.resume-link:active {
+  transform: translateY(-1px);
+}
+
+.resume-icon {
+  flex-shrink: 0;
+}
+
+.download-icon-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.resume-info {
+  text-align: left;
+  flex: 1;
+}
+
+.resume-info h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.resume-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .resume-container {
+    padding: 1.5rem;
+  }
+  
+  .resume-link {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+    min-width: auto;
+  }
+  
+  .resume-info {
+    text-align: center;
+  }
+}
+
