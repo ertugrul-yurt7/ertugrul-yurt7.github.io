@@ -47,39 +47,38 @@ document.addEventListener('DOMContentLoaded', function() {
 
 const experiences = [
     {
-        companyName: "Company Name 1",
-        period: "January 2023 - Present",
-        website: "https://company1.com",
+        companyName: "BC Technology for Learning Society",
+        period: "January 2023 - February 2023",
+        website: "https://reusetechbc.ca/",
         logo: "company1-logo.png", // Add your logo file
         type: "Work Experience",
         roles: [
-            "Role 1: Description of what you did",
-            "Role 2: Another responsibility or achievement",
-            "Role 3: Additional tasks and accomplishments"
+            "Refurbishing computer and laptop hardware/parts and installing software.",
+            "Quality check of refurbished computers and laptops.",
+            "Dividing tasks with the help of team work."
         ]
     },
     {
-        companyName: "Company Name 2",
-        period: "June 2022 - December 2022",
-        website: "https://company2.com",
+        companyName: "Greater Vancouver Food Bank",
+        period: "August 2022 - August 2024",
+        website: "https://foodbank.bc.ca/",
         logo: "company2-logo.png",
-        type: "Internship",
+        type: "Volunteer",
         roles: [
-            "Intern Role 1: What you learned and contributed",
-            "Intern Role 2: Projects you worked on",
-            "Intern Role 3: Skills you developed"
+            "Helping people to get food with a with a friendly and embracing manner.",
+            "Doing team work to complete tasks such as restocking.",
         ]
     },
     {
-        companyName: "Volunteer Organization",
-        period: "March 2022 - May 2022",
-        website: "https://volunteer-org.com",
+        companyName: "Shoppers Drug Mart",
+        period: "February 2022 - May 2022",
+        website: "https://www.shoppersdrugmart.ca/",
         logo: "volunteer-logo.png",
-        type: "Volunteering Experience",
+        type: "Volunteer Pharmacy Assistant",
         roles: [
-            "Volunteer Role 1: Community service activities",
-            "Volunteer Role 2: Leadership responsibilities",
-            "Volunteer Role 3: Impact and outcomes"
+            "Customer service: Greeting customers and giving out prescriptions.",
+            "Calling customers to invite them to pick up their prescriptions.",
+            "Locating and cashing out prescriptions and ancillary items, with my own responsibility."
         ]
     }
 ];
