@@ -135,9 +135,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 const sfuPhotos = [
-    'sfu1.jpg',
-    'sfu2.jpg', 
-    'sfu3.jpg'
+    'sfu2.jpg',
+    'sfu3.jpg', 
+    'sfu4.jpg'
 ];
 
 let currentSfuPhotoIndex = 0;
@@ -147,7 +147,7 @@ const educationData = [
         schoolName: "Simon Fraser University",
         period: "2023 - 2027",
         website: "https://www.sfu.ca/",
-        logo: "sfu_logo.png",
+        logo: "sfu.png",
         type: "Bachelor's Degree",
         details: [
             "Computing Science Major",
