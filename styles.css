@@ -311,3 +311,68 @@ section h2 {
   margin-top: 1rem;
 }
 
+.hobbies-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.hobby-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hobby-info h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.hobby-info p {
+  margin: 0;
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.hobby-photos {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.hobby-photo {
+  max-width: 400px;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: block;
+  margin: 0 auto 1rem auto;
+  object-fit: cover;
+}
+
+.hobby-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+#hobby-counter {
+  font-weight: 500;
+  color: #666;
+  min-width: 50px;
+  text-align: center;
+}
+
+#prev-hobby-section-btn,
+#next-hobby-section-btn {
+  padding: 10px 15px;
+  font-size: 0.9rem;
+}
+
